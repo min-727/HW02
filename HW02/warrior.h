@@ -1,9 +1,10 @@
 #pragma once
+#include "player.h"
+#include "Monster.h"
+
+
 class Warrior : public Player {
 public:
-	void attack() {
-		cout << "검을 휘두릅니다." << endl;
-	}
-	Warrior(string nickname) : Player(nickname) {}
-
+	void attack(Monster* monster) override;
+	Warrior(string nickname);
 };

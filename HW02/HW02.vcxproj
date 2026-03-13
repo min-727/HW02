@@ -21,12 +21,19 @@
   <ItemGroup>
     <ClInclude Include="archer.h" />
     <ClInclude Include="magician.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="thief.h" />
     <ClInclude Include="warrior.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="archer.cpp" />
     <ClCompile Include="HW02.cpp" />
+    <ClCompile Include="magician.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="thief.cpp" />
+    <ClCompile Include="warrior.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>

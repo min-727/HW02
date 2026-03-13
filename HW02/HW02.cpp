@@ -1,10 +1,12 @@
-#include <iostream>
+﻿#include <iostream>
 #include "player.h"
 #include "warrior.h"
 #include "magician.h"
 #include "thief.h"
 #include "archer.h"
+#include "Monster.h"
 #include <string>
+
 using namespace std;
 
 
@@ -49,8 +51,11 @@ int main() {
         cout << "잘못된 입력입니다." << endl;
         return 1;
     }
-
-    player->attack();
+    Monster *monster = new Monster("슬라임");
+    monster->attack(player);
+    
+    player->attack(monster);
+    cout << endl;
     player->printPlayerStatus();
 
     if (player != nullptr)

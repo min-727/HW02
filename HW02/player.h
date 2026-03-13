@@ -1,12 +1,17 @@
 #pragma once
 #include <string>
+#include <iostream>
 using namespace std;
+class Monster;
 
 class Player {
 public:
-    Player(string nickname) : nickname(nickname) {};
+    Player(string nickname) : nickname(nickname), level(1), HP(50), MP(50), power(50), defence(50), accuracy(30), speed(10)  {};
 
-    virtual void attack() = 0;
+    virtual ~Player() {}
+    
+    
+    virtual void attack(Monster* monster) = 0;
     void printPlayerStatus();
 
     // getter 함수
@@ -74,17 +79,3 @@ protected:
 };
 
 
-void Player::printPlayerStatus() {
-    cout << "------------------------------------" << endl;
-    cout << "*현재 능력치 " << endl;
-    cout << "닉네임: " << nickname << endl;
-    cout << "직업: " << job_name << endl;
-    cout << "Lv. " << level << endl;
-    cout << "HP: " << HP << endl;
-    cout << "MP: " << MP << endl;
-    cout << "공격력: " << power << endl;
-    cout << "방어력: " << defence << endl;
-    cout << "정확도: " << accuracy << endl;
-    cout << "속도: " << speed << endl;
-    cout << "------------------------------------" << endl;
-}
